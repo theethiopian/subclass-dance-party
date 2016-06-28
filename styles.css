@@ -12,6 +12,18 @@ body, a:link, a:visited, a:active{
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
+.title, .lineUp{
+  padding:5px 12px;
+  float:left;
+}  
+.title, .topUp{
+  padding:5px 12px;
+  float:top;
+}  
+.title, .breakLineButton{
+  padding:5px 12px;
+  float:top;
+}  
 }
 .topbar{
   height:32px;
@@ -21,7 +33,80 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+ -webkit-transition: top 1s, left 1s;
+  border:10px rand;
   border-radius:10px;
   position:absolute;
+}
+
+.brey{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url('albrey2.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+  -webkit-animation: ;
+}
+
+.jamil{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url('jamil.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}
+
+.alan{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url('alan.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}
+
+.marc{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url('marc.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}
+.mo{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url('mo.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}
+
+.khaled{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url('anotherone.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}
+
+
+@-webkit-keyframes spin {
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(360deg);}
 }

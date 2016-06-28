@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Object Dance Party</title>
+    <title>BlinkediN</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
+    <script src="src/Albrey.js"></script>
+    <script src="src/jamil.js"></script>
+    <script src="src/alan.js"></script>
+    <script src="src/marc.js"></script>
+    <script src="src/mo.js"></script>
+    <script src="src/khaled.js"></script>
   </head>
   <body>
+  <audio id="myTune">
+  <source src="igotthekeys.mp3">
+  <source src="igotthekeys.ogg">
+</audio>
+<button onclick="document.getElementById('myTune').play()">Play Music</button>
+<button onclick="document.getElementById('myTune').pause()">Pause Music</button>
+<button onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">Stop Music</button>
+<audio class="collision-sound" autoplay src="letmeinspireyou.mp3"></audio>
+<audio class="addDancerButton" src="letmeinspireyou.mp3"></audio>
+<audio class="collision-sound" autoplay src="letmeinspireyou.mp3"></audio>
     <div class="topbar">
-      <span class="title">object dance party</span>
+      <span class="title">BlinkediN</span>
+      <a href="#" class="methodButton lineUpButton">makes our blinkies line up</a>
+      <a href="#" class="methodButton topUpButton">makes our blinkies line up TOP</a>
+      <a href="#" class="methodButton breakLineButton">BREAK OUT</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="albreyDancer">makes a brey</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="jamilDancer">makes a jamil</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="alanDancer">makes an alan</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="marcDancer">makes a marc</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="moDancer">makes a mo</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
     <script src="src/init.js"></script>
   </body>

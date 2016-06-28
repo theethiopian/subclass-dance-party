@@ -22,12 +22,43 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+
+    window.dancers.push(dancer);
   });
+
+   $(".lineUpButton").on("click", function(event){
+    // Iterates through each dancer in the global "dancers" array
+    window.dancers.forEach(function(dancer){
+      // Calls the lineUp method for each dancer
+      dancer.lineUp();
+    });
+  });
+
+   $(".topUpButton").on("click", function(event){
+    // Iterates through each dancer in the global "dancers" array
+    window.dancers.forEach(function(dancer){
+      // Calls the lineUp method for each dancer
+      dancer.topUp();
+    });
+  });
+
+  $(".breakLineButton").on("click", function(event){
+    // Iterates through each dancer in the global "dancers" array
+    window.dancers.forEach(function(dancer){
+      // Calls the lineUp method for each dancer
+      dancer.breakLine();
+    });
+  }); 
+
+   var audio = $("#mySoundClip")[0];
+$("nav a").mouseenter(function() {
+  audio.play();
+});
 });
 
