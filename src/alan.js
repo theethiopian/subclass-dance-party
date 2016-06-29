@@ -16,8 +16,8 @@ alanDancer.prototype.constructor = alanDancer;
 alanDancer.prototype.step = function(){
 makeDancer.prototype.step.call(this);
 
-  // Makes the HungryDancer "mouth" open and close
-  this.$node.slideToggle();
+  
+  this.$node.toggle();
 
   // On mouseover, change the HungryDancer background color
   var styleSettings = {

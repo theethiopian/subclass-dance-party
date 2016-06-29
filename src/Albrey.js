@@ -6,13 +6,13 @@ var albreyDancer = function(top, left, timeBetweenSteps){
   this.$node.addClass('brey');
 };
 
-// Import the methods of the Dancer superclass
+// Import the methods of the makeDancer superclass
 albreyDancer.prototype = Object.create(makeDancer.prototype);
 
-// Reset the constructor to of brey to brey
+// Reset the constructor to brey
 albreyDancer.prototype.constructor = albreyDancer;
 
-// Call the Dancer step method, which repeatedly calls the step method
+// Call the makeDancer step method, which repeatedly calls the step method
 albreyDancer.prototype.step = function(){
   makeDancer.prototype.step.call(this);
 
@@ -20,7 +20,7 @@ albreyDancer.prototype.step = function(){
   var randY = $("body").height() / 3 * (2 * Math.random() - 1);
   var randX = $("body").width() / 3 * (2 * Math.random() - 1);
 
-  // Changes HRDancer's position with animate transition (in style.css)
+  // Changes brey's position with animate transition (in style.css)
   setTimeout(function(){
 
     // albrey current x and y coordinates
@@ -59,11 +59,14 @@ albreyDancer.prototype.step = function(){
         dancerNewY - 50 <= 0 || 
         dancerNewY + 50 >= $("body").height();
       
+
       // When dancers collide with one another, trigger sound and bounce back
       if (dancerCollision){
-          $('.collision-sound').attr('src', 'letmeinspreyou.mp3');
+          $('.collision-sound').attr('src', 'assets/yousmart.mp3');
           randY = -3 * randY;
           randX = -3 * randX;
+          dancer.$node.addClass('jordan')
+          dancer.$node.removeClass('brey')
       }
 
       // When dancers collide with the wall, transition to new X and Y coordinates
@@ -90,6 +93,8 @@ albreyDancer.prototype.step = function(){
        height: 200,
        width: 200
      };
+     self.$node.addClass('jordan');
+      self.$node.removeClass('brey');
      self.$node.css(styleSettings);
    });
 };

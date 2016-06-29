@@ -9,11 +9,11 @@ kevinDancer.prototype = Object.create(makeDancer.prototype);
 kevinDancer.prototype.constructor = kevinDancer;
 kevinDancer.prototype.step = function(){
   makeDancer.prototype.step.call(this);
-  this.$node.slideToggle();
+  this.$node.toggle();
   var self = this;
-   $('.jordan').on('mouseover', function() {
+   $('.kevin').on('mouseover', function() {
      var styleSettings = {
-       height: 200,
+       height: 100,
        width: 200
      };
      self.$node.css(styleSettings);

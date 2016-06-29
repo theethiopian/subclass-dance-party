@@ -23,12 +23,16 @@ makeDancer.prototype.setPosition = function(top, left){
 makeDancer.prototype.lineUp = function(){
   var styleSettings = {
     left: 0,
+    height: 100,
+    width: 100
   };
   this.$node.css(styleSettings);
 };
 makeDancer.prototype.topUp = function(){
   var styleSettings = {
-    top: 3,
+    top:100 ,
+    height: 50,
+    width: 50
   };
   this.$node.css(styleSettings);
 };
